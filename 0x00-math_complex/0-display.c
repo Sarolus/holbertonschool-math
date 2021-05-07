@@ -11,13 +11,21 @@ void display_complex_number(complex c)
 	{
 		printf("%.f", c.re);
 	}
-	if (c.re > 0 && c.im > 0)
+	if (c.re != 0 && c.im > 0)
 	{
 		printf(" + ");
 	}
-	if (c.im != 0)
+	else if (c.re != 0 && c.im < 0)
+	{
+		printf(" - ");
+	}
+	if (c.im > 0)
 	{
 		printf("%.fi", c.im);
+	}
+	else if (c.im < 0)
+	{
+		printf("%.fi", c.im * -1);
 	}
 	printf("\n");
 }
